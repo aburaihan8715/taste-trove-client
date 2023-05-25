@@ -34,7 +34,7 @@ const SocialLogin = () => {
       {/* google login */}
       <div className="text-center mt-4 flex justify-center">
         <div className="w-48">
-          <button onClick={googleAuthenticationHandler} className="btn btn-primary w-full flex justify-between px-10">
+          <button onClick={googleAuthenticationHandler} className="btn btn-outline btn-primary w-full flex justify-between px-10">
             <span>
               <img src="https://i.ibb.co/72bXZqD/google.png" width="24px" height="24px" alt="google" />
             </span>
@@ -46,7 +46,7 @@ const SocialLogin = () => {
       {/* github login */}
       <div className="text-center mt-4  flex justify-center">
         <div className="w-48">
-          <button onClick={githubAuthenticationHandler} className="btn btn-primary w-full flex justify-between px-10">
+          <button onClick={githubAuthenticationHandler} className="btn btn-outline btn-primary w-full flex justify-between px-10">
             <span>
               <img src="https://i.ibb.co/JHJ7PMt/github.png" width="24px" height="24px" alt="google" />
             </span>
