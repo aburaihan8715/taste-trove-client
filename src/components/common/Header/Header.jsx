@@ -1,25 +1,42 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider";
 
 const Header = () => {
+  const { logOut, user,setUser,setError } = useContext(AuthContext);
+
+  const logOutHandler = () => {
+    logOut()
+      .then(() => {
+        // Sign-out successful.
+        setUser(null)
+        setError("")
+        console.log("user logged out");
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log(error.message);
+      });
+  };
+
   // nav items
   const menuItems = (
     <>
       <li>
-        <NavLink className="" to="/">
+        <NavLink className="font-semibold rounded uppercase text-gray-600" to="/">
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink className="" to="/blogs">
+        <NavLink className="font-semibold rounded uppercase text-gray-600" to="/blogs">
           Blogs
         </NavLink>
       </li>
     </>
   );
   return (
-    <header>
-      <div className="navbar bg-base-100 container mx-auto">
+    <header className="bg-secondary py-5">
+      <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-primary lg:hidden">
@@ -31,7 +48,7 @@ const Header = () => {
               {menuItems}
             </ul>
           </div>
-          <Link to="/" className="normal-case font-semibold text-gray-700 text-4xl">
+          <Link to="/" className="normal-case font-semibold text-gray-600 text-4xl">
             TasteTrove
           </Link>
         </div>
@@ -42,16 +59,33 @@ const Header = () => {
         </div>
 
         <div className="navbar-end space-x-2">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-12 rounded-full">
-              <img src="http://placehold.it/50x50" />
-            </div>
-          </label>
-          <Link to="/login" className="btn btn-primary">
-            Login
-          </Link>
+          {user?.uid && (
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-12 rounded-full">
+                <img src="http://placehold.it/40x40" />
+              </div>
+            </label>
+          )}
 
-          <button className="btn btn-primary">LogOut</button>
+          {!user?.uid && (
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-12 rounded-full">
+                <img src="http://placehold.it/50x50" />
+              </div>
+            </label>
+          )}
+
+          {!user?.uid && (
+            <Link to="/login" className="btn btn-primary rounded text-gray-600">
+              Login
+            </Link>
+          )}
+
+          {user?.uid && (
+            <button onClick={logOutHandler} className="btn btn-primary rounded text-gray-600">
+              LogOut
+            </button>
+          )}
         </div>
       </div>
     </header>
