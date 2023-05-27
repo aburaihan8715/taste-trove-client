@@ -36,8 +36,10 @@ const Header = () => {
   );
   return (
     <header className="bg-secondary py-5 ">
-      <div className="navbar container mx-auto">
-        <div className="navbar-start">
+      <div className="navbar flex-col sm:flex-row container mx-auto bg-slate-400">
+
+
+        <div className="w-full navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-primary lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,8 +61,8 @@ const Header = () => {
         </div>
 
 
-        <div className="navbar-end space-x-2">
-          {!user?.uid && (
+        <div className="w-full mt-2 sm:mt-0 navbar-end space-x-2">
+          {user?.uid && (
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-12 rounded-full">
                 <img loading="lazy" src="http://placehold.it/50x50" />
@@ -69,7 +71,7 @@ const Header = () => {
           )}
 
           {!user?.uid && (
-            <Link to="/login" className="btn btn-primary rounded text-gray-600">
+            <Link to="/login" className="btn btn-primary w-full sm:w-auto rounded text-gray-600">
               Login
             </Link>
           )}
