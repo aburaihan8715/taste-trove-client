@@ -8,7 +8,7 @@ const Chefs = () => {
   const { loading, setLoading } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch("http://localhost:4000/chefs")
+    fetch("https://taste-trove-server-aburaihan8715.vercel.app/chefs")
       .then((res) => res.json())
       .then((data) => {
         setChefsData(data);
