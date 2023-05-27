@@ -3,3 +3,6 @@ https://i.ibb.co/XF89yGB/chef-banner.jpg
 
 //email image
 https://i.ibb.co/sFNLjCd/email.png
+
+// 404 image
+https://i.ibb.co/YhZ77K0/404.png

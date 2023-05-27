@@ -14,11 +14,7 @@ const NotFound = () => {
       </div>
       <div className="flex justify-center items-center min-h-[calc(100vh-48px)]">
         <div className="text-5xl">
-          <h1>Oops!</h1>
-          <p>Sorry, an unexpected error has occurred.</p>
-          <p>
-            <i>{error.statusText || error.message}</i>
-          </p>
+          <img className="w-full" src="https://i.ibb.co/YhZ77K0/404.png" alt="error" />
         </div>
       </div>
     </div>

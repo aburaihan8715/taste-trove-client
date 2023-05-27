@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ChefRecipes = () => {
+  const [like, setLike] = useState(false);
   const params = useParams();
   const data = useLoaderData();
   const chefRecipes = data?.find((chefRecipe) => chefRecipe.id === params.id);
   const { image, chefName, bio, likes, numberOfRecipes, yearsOfExperience, recipes } = chefRecipes;
 
-  
+  const likeHandler = () => {
+    setLike(!like);
+    toast.success("Wow you have liked the recipe !", {
+      position: "top-center",
+    });
+  };
+
   return (
     <div className="py-8">
       <div className="container mx-auto">
@@ -32,7 +41,7 @@ const ChefRecipes = () => {
         <hr className="my-8" />
         <div>
           {recipes.map((recipe) => (
-            <div className="mb-8">
+            <div key={recipe.id} className="mb-8">
               <div className="">
                 <h2 className="text-2xl capitalize font-medium text-center">{recipe?.recipeName}</h2>
                 <div className="mt-8">
@@ -59,7 +68,13 @@ const ChefRecipes = () => {
               <div className=" flex justify-end">
                 <div className="text-2xl border p-2 space-x-2">
                   <span>⭐⭐⭐⭐ : {recipe?.rating}</span>
-                  <button>🧡</button>
+                  <div className="inline-block">
+                    <button onClick={likeHandler} className="" disabled={like}>
+                      {!like && <span>🤍</span>}
+                      {like && <span>🧡</span>}
+                    </button>
+                    <ToastContainer />
+                  </div>
                 </div>
               </div>
             </div>
