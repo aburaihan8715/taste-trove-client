@@ -48,7 +48,7 @@ const Header = () => {
               {menuItems}
             </ul>
           </div>
-          <Link to="/" className="normal-case font-semibold text-gray-600 text-4xl">
+          <Link to="/" className="normal-case tracking-tighter font-semibold text-gray-600 text-4xl">
             TasteTrove
           </Link>
         </div>

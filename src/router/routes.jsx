@@ -6,7 +6,7 @@ import Register from "../components/Register/Register";
 import Blogs from "../components/Blogs/Blogs";
 import NotFound from "../components/NotFound/NotFound";
 import ForgetPassword from "../components/ForgetPassword/ForgetPassword";
-import PrivateRoute from "./PrivateRoute";
+import ChefRecipes from "../components/ChefDetails/ChefRecipes";
 
 const router = createBrowserRouter([
   {
@@ -28,15 +28,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/blogs",
-        element: (
-          <PrivateRoute>
-            <Blogs></Blogs>
-          </PrivateRoute>
-        ),
+        element: <Blogs></Blogs>,
       },
       {
         path: "/forgetPassword",
         element: <ForgetPassword></ForgetPassword>,
+      },
+      {
+        path: "/chefRecipes/:id",
+        element: <ChefRecipes></ChefRecipes>,
+        loader: () => fetch("http://localhost:4000/chefs"),
       },
     ],
   },
