@@ -36,7 +36,7 @@ const Header = () => {
   );
   return (
     <header className="bg-secondary py-5 ">
-      <div className="navbar flex-col sm:flex-row container mx-auto bg-slate-400">
+      <div className="navbar flex-col sm:flex-row container mx-auto">
 
 
         <div className="w-full navbar-start">
