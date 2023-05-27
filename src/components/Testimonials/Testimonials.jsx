@@ -10,7 +10,7 @@ const Testimonials = () => {
           <div class="grid md:grid-cols-3 gap-x-6 lg:gap-x-12">
             <div class="mb-12 md:mb-0">
               <div class="flex justify-center mb-6">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" class="rounded-full shadow-lg w-32" />
+                <img loading="lazy" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" class="rounded-full shadow-lg w-32" />
               </div>
               <h5 class="text-lg font-bold mb-4">Maria Smantha</h5>
               <h6 class="font-medium text-blue-600 mb-4">Teacher</h6>
@@ -122,7 +122,7 @@ const Testimonials = () => {
             </div>
             <div class="mb-12 md:mb-0">
               <div class="flex justify-center mb-6">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(2).jpg" class="rounded-full shadow-lg w-32" />
+                <img loading="lazy" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(2).jpg" class="rounded-full shadow-lg w-32" />
               </div>
               <h5 class="text-lg font-bold mb-4">Lisa Cudrow</h5>
               <h6 class="font-medium text-blue-600 mb-4">Housewife</h6>
@@ -234,7 +234,7 @@ const Testimonials = () => {
             </div>
             <div class="mb-0">
               <div class="flex justify-center mb-6">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-full shadow-lg w-32" />
+                <img loading="lazy" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-full shadow-lg w-32" />
               </div>
               <h5 class="text-lg font-bold mb-4">John Smith</h5>
               <h6 class="font-medium text-blue-600 mb-4">Business man</h6>

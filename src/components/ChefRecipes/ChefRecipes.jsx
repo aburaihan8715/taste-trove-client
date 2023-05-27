@@ -23,7 +23,7 @@ const ChefRecipes = () => {
         <div>
           <div className="card lg:card-side bg-base-100 shadow-sm rounded">
             <figure>
-              <img className="w-full h-full" src={image} alt="chef" />
+              <img loading="lazy" className="w-full h-full" src={image} alt="chef" />
             </figure>
             <div className="card-body">
               <h3 className="card-title text-gray-600">{chefName}</h3>

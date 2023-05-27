@@ -35,7 +35,7 @@ const Header = () => {
     </>
   );
   return (
-    <header className="bg-secondary py-5">
+    <header className="bg-secondary py-5 ">
       <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -58,19 +58,12 @@ const Header = () => {
           <ul className="menu menu-horizontal px-1 space-x-2">{menuItems}</ul>
         </div>
 
-        <div className="navbar-end space-x-2">
-          {user?.uid && (
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-12 rounded-full">
-                <img src="http://placehold.it/40x40" />
-              </div>
-            </label>
-          )}
 
+        <div className="navbar-end space-x-2">
           {!user?.uid && (
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-12 rounded-full">
-                <img src="http://placehold.it/50x50" />
+                <img loading="lazy" src="http://placehold.it/50x50" />
               </div>
             </label>
           )}

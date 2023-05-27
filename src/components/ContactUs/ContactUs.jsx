@@ -7,7 +7,7 @@ const ContactUs = () => {
         <div className="hero min-h-screen ">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <div className="">
-              <img className="max-w-full" src="https://i.ibb.co/sFNLjCd/email.png" alt="email" />
+              <img loading="lazy" className="max-w-full" src="https://i.ibb.co/sFNLjCd/email.png" alt="email" />
             </div>
 
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl ">

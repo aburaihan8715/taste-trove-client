@@ -41,7 +41,7 @@ const SocialLogin = () => {
         <div className="w-48">
           <button onClick={googleAuthenticationHandler} className="btn btn-outline btn-primary rounded w-full flex justify-between px-10">
             <span>
-              <img src="https://i.ibb.co/72bXZqD/google.png" width="24px" height="24px" alt="google" />
+              <img loading="lazy" src="https://i.ibb.co/72bXZqD/google.png" width="24px" height="24px" alt="google" />
             </span>
             <span>google</span>
           </button>
@@ -53,7 +53,7 @@ const SocialLogin = () => {
         <div className="w-48">
           <button onClick={githubAuthenticationHandler} className="btn btn-outline btn-primary rounded w-full flex justify-between px-10">
             <span>
-              <img src="https://i.ibb.co/JHJ7PMt/github.png" width="24px" height="24px" alt="google" />
+              <img loading="lazy" src="https://i.ibb.co/JHJ7PMt/github.png" width="24px" height="24px" alt="google" />
             </span>
             <span>github</span>
           </button>
