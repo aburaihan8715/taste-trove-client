@@ -1,2 +1,5 @@
 //chef banner image
 https://i.ibb.co/XF89yGB/chef-banner.jpg
+
+//email image
+https://i.ibb.co/sFNLjCd/email.png

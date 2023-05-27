@@ -6,7 +6,8 @@ import Register from "../components/Register/Register";
 import Blogs from "../components/Blogs/Blogs";
 import NotFound from "../components/NotFound/NotFound";
 import ForgetPassword from "../components/ForgetPassword/ForgetPassword";
-import ChefRecipes from "../components/ChefDetails/ChefRecipes";
+import ChefRecipes from "../components/ChefRecipes/ChefRecipes";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {

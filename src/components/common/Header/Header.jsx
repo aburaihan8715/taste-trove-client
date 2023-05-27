@@ -3,14 +3,14 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider";
 
 const Header = () => {
-  const { logOut, user,setUser,setError } = useContext(AuthContext);
+  const { logOut, user, setUser, setError } = useContext(AuthContext);
 
   const logOutHandler = () => {
     logOut()
       .then(() => {
         // Sign-out successful.
-        setUser(null)
-        setError("")
+        setUser(null);
+        setError("");
         console.log("user logged out");
       })
       .catch((error) => {

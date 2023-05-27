@@ -5,7 +5,7 @@ const ChefRecipes = () => {
   const params = useParams();
   const data = useLoaderData();
   const chefRecipes = data?.find((chefRecipe) => chefRecipe.id === params.id);
-  const { image, chefName, bio, likes, numberOfRecipes, yearsOfExperience, recipes, rating } = chefRecipes;
+  const { image, chefName, bio, likes, numberOfRecipes, yearsOfExperience, recipes} = chefRecipes;
 
   // ingredient items
   const ingredientItems = recipes[0]?.ingredients?.map((item, index) => (
