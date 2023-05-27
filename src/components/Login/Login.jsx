@@ -80,6 +80,7 @@ const Login = () => {
                 required
               />
             </div>
+            
             <div className="relative">
               <input
                 className="border border-primary rounded p-3 w-full focus:outline-none focus:ring-2 ring-primary"

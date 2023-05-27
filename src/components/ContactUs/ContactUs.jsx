@@ -2,16 +2,18 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="bg-base-200">
+    <div className="bg-base-200 py-8">
       <div className="container mx-auto">
-        <div className="hero min-h-screen ">
-          <div className="hero-content flex-col lg:flex-row-reverse">
-            <div className="">
+        <div className="">
+          <div className="grid sm:grid-cols-2 gap-8">
+            <div className="p-8">
               <img loading="lazy" className="max-w-full" src="https://i.ibb.co/sFNLjCd/email.png" alt="email" />
-            </div>
+            </div> 
 
-            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl ">
-              <div className="card-body">
+
+
+            <div className="self-end pb-8">
+              <div className="">
                 <h3 className="text-3xl font-medium text-gray-600">Contact Us</h3>
                 <div className="form-control">
                   <label className="label">
@@ -39,6 +41,7 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
