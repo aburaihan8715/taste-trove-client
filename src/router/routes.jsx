@@ -11,7 +11,6 @@ import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <MainLayout></MainLayout>,
     errorElement: <NotFound></NotFound>,
     children: [

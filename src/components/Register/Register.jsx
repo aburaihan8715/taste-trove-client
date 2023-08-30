@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../contexts/AuthProvider";
 import SocialLogin from "../common/SocialLogin/SocialLogin";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid";
@@ -6,16 +6,14 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { createUserUsingEmailAndPassword, setUser, setLoading, setError, error } = useContext(AuthContext);
+  const { createUserUsingEmailAndPassword, setUser, setError, error } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
   const registerHandler = (event) => {
     event.preventDefault();
     const form = event.target;
-    const name = form.name.value;
     const email = form.email.value;
-    const photoURL = form.photoURL.value;
     const password = form.password.value;
     setError("");
 
@@ -50,7 +48,7 @@ const Register = () => {
         alert("User has been created successfully!!");
         setUser(user);
         setError("");
-        navigate("/")
+        navigate("/");
       })
       .catch((error) => {
         const errorMessage = error.message;

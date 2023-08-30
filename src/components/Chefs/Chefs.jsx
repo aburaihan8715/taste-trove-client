@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Chef from "../Chef/Chef";
 import { AuthContext } from "../../contexts/AuthProvider";
 import LoadingSpinner from "../common/LoadingSpinner/LoadingSpinner";
@@ -26,8 +26,8 @@ const Chefs = () => {
         <h2 className="text-4xl text-center font-medium text-gray-600 tracking-tighter">Our Skilled and Passionate Chefs</h2>
         <p className="mt-6 max-w-4xl mx-auto text-justify">
           Embark on a culinary journey with our skilled and passionate chefs. They are the driving force behind the delectable flavors and exquisite
-          creations you'll experience at our restaurant. With years of experience and a deep love for the art of cooking, our chefs bring their
-          expertise and creativity to every dish they prepare.
+          creations experience at our restaurant. With years of experience and a deep love for the art of cooking, our chefs bring their expertise and
+          creativity to every dish they prepare.
         </p>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">

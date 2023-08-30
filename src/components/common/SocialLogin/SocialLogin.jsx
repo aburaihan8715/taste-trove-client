@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../../../contexts/AuthProvider";
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const SocialLogin = () => {
         const loggedUser = result.user;
         setUser(loggedUser);
         alert("User created successfully!");
-        navigate("/")
+        navigate("/");
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -26,7 +26,7 @@ const SocialLogin = () => {
         const loggedUser = result.user;
         setUser(loggedUser);
         alert("User created successfully!");
-        navigate("/")
+        navigate("/");
       })
       .catch((error) => {
         const errorMessage = error.message;

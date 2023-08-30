@@ -1,5 +1,3 @@
-import React from "react";
-
 const LoadingSpinner = () => {
   return (
     <div className="container mx-auto text-gray-600">

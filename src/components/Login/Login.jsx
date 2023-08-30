@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import SocialLogin from "../common/SocialLogin/SocialLogin";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid";
@@ -6,7 +6,7 @@ import { AuthContext } from "../../contexts/AuthProvider";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { loginUsingEmailAndPassword, setUser, setLoading, setError, error, user } = useContext(AuthContext);
+  const { loginUsingEmailAndPassword, setUser, setError, error } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -80,7 +80,7 @@ const Login = () => {
                 required
               />
             </div>
-            
+
             <div className="relative">
               <input
                 className="border border-primary rounded p-3 w-full focus:outline-none focus:ring-2 ring-primary"
@@ -111,7 +111,7 @@ const Login = () => {
             {/* error message */}
           </div>
         </form>
-        <p className="text-center text-xl text-primary">---------------or---------------</p>
+        <div className="divider">OR</div>
 
         {/* social login */}
         <SocialLogin></SocialLogin>

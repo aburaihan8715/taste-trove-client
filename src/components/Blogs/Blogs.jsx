@@ -1,5 +1,3 @@
-import React from "react";
-
 const Blogs = () => {
   return (
     <div className="py-8">
@@ -24,15 +22,15 @@ const Blogs = () => {
           <h4 className="text-3xl text-gray-600 font-medium">What is the difference between node js and express js?</h4>
           <div className="mt-2">
             <strong>Ans :</strong> Node js is javascript run time means we can write javascript code on that platform, more specific we can write
-            server code on that run time
-            .Express js is framework for node js.We can manage server code easily by express js.
+            server code on that run time .Express js is framework for node js.We can manage server code easily by express js.
           </div>
         </div>
 
         <div className="mb-8">
           <h4 className="text-3xl text-gray-600 font-medium">What is the custom hook, and why will we create a custom hook?</h4>
           <div className="mt-2">
-            <strong>Ans :</strong> Custom hook is nothing but a function.If we want to share same code or same logic in many components custom hook comes to the table.In this way we can reduce repetition of code.
+            <strong>Ans :</strong> Custom hook is nothing but a function.If we want to share same code or same logic in many components custom hook
+            comes to the table.In this way we can reduce repetition of code.
           </div>
         </div>
       </div>

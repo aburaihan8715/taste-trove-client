@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider";
 
@@ -37,8 +37,6 @@ const Header = () => {
   return (
     <header className="bg-secondary py-5 ">
       <div className="navbar flex-col sm:flex-row container mx-auto">
-
-
         <div className="w-full navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-primary lg:hidden">
@@ -59,7 +57,6 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-2">{menuItems}</ul>
         </div>
-
 
         <div className="w-full mt-2 sm:mt-0 navbar-end space-x-2">
           {user?.uid && (
