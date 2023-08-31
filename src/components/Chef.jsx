@@ -11,7 +11,7 @@ const Chef = ({ chef }) => {
   return (
     <div className="card rounded glass">
       <figure className="">
-        <img loading="lazy" className="w-full h-52" src={image} alt="chef" />
+        <img loading="lazy" className="w-full h-52 object-cover" src={image} alt="chef" />
       </figure>
       <div className="card-body">
         <h3 className="card-title text-gray-600">{chefName}</h3>
