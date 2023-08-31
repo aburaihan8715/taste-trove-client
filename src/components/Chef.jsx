@@ -5,24 +5,30 @@ const Chef = ({ chef }) => {
   const navigate = useNavigate();
 
   const viewRecipesHandler = (id) => {
-    // console.log(id);
     navigate(`/chefRecipes/${id}`);
   };
 
   return (
     <div className="card rounded glass">
       <figure className="">
-        <img loading="lazy" className="w-full" src={image} alt="chef" />
+        <img loading="lazy" className="w-full h-52" src={image} alt="chef" />
       </figure>
       <div className="card-body">
         <h3 className="card-title text-gray-600">{chefName}</h3>
-        <p>Experience : {yearsOfExperience} years</p>
-        <p>
-          Recipes : {numberOfRecipes}
-          <sup>+</sup>
-        </p>
+        <div>
+          Experience :<span className="badge badge-secondary">{yearsOfExperience} years</span>
+        </div>
+        <div>
+          <span>Recipes : </span>
+          <span className="badge badge-warning">
+            {numberOfRecipes}
+            <sup className="text-orange-600 text-sm mt-2">+</sup>
+          </span>
+        </div>
 
-        <p>Likes : {likes}</p>
+        <div>
+          <button className="badge badge-secondary">👍 : {likes}</button>
+        </div>
         <div className="card-actions justify-end">
           <button onClick={() => viewRecipesHandler(id)} className="btn btn-primary rounded text-gray-600">
             View Recipes

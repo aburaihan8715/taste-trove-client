@@ -18,12 +18,12 @@ const Header = () => {
   const menuItems = (
     <>
       <li>
-        <NavLink className="font-semibold rounded uppercase text-gray-600" to="/">
+        <NavLink className="uppercase text-sm font-semibold text-gray-600" to="/">
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink className="font-semibold rounded uppercase text-gray-600" to="/blogs">
+        <NavLink className="uppercase text-sm font-semibold text-gray-600" to="/blogs">
           Blogs
         </NavLink>
       </li>
@@ -65,13 +65,13 @@ const Header = () => {
           )}
 
           {!user?.uid && (
-            <Link to="/login" className="btn btn-primary w-full sm:w-auto rounded text-gray-600">
+            <Link to="/login" className="btn btn-primary w-full sm:w-auto text-gray-600">
               Login
             </Link>
           )}
 
           {user?.uid && (
-            <button onClick={logOutHandler} className="btn btn-primary rounded text-gray-600">
+            <button onClick={logOutHandler} className="btn btn-md btn-primary rounded text-gray-600">
               LogOut
             </button>
           )}
