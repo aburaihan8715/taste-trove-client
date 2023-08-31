@@ -1,7 +1,7 @@
 const Blogs = () => {
   return (
-    <div className="py-8">
-      <div className="container mx-auto">
+    <section className="py-8">
+      <div className="p-2 sm:p-4 w-full sm:max-w-4xl mx-auto">
         <div className="mb-8">
           <h4 className="text-3xl text-gray-600 font-medium">What is the difference between controlled and uncontrolled components?</h4>
           <div className="mt-2">
@@ -34,7 +34,7 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

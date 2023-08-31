@@ -1,16 +1,12 @@
-import React from "react";
-
 const ContactUs = () => {
   return (
-    <div className="bg-base-200 py-8">
-      <div className="container mx-auto">
+    <section className="bg-base-200 py-8 px-2 sm:px-10">
+      <div className="w-full sm:max-w-5xl mx-auto">
         <div className="">
           <div className="grid sm:grid-cols-2 gap-8">
             <div className="p-8">
               <img loading="lazy" className="max-w-full" src="https://i.ibb.co/sFNLjCd/email.png" alt="email" />
-            </div> 
-
-
+            </div>
 
             <div className="self-end pb-8">
               <div className="">
@@ -41,11 +37,10 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

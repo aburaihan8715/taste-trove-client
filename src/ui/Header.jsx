@@ -1,21 +1,16 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { AuthContext } from "../../../contexts/AuthProvider";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const Header = () => {
-  const { logOut, user, setUser, setError } = useContext(AuthContext);
+  const { logOut, user, setAuthError, authError } = useContext(AuthContext);
 
   const logOutHandler = () => {
     logOut()
-      .then(() => {
-        // Sign-out successful.
-        setUser(null);
-        setError("");
-        console.log("user logged out");
-      })
+      .then(() => {})
       .catch((error) => {
-        // An error happened.
-        console.log(error.message);
+        setAuthError(error.message);
+        alert(`Something wrong with : ${authError}`);
       });
   };
 
@@ -35,8 +30,8 @@ const Header = () => {
     </>
   );
   return (
-    <header className="bg-secondary py-5 ">
-      <div className="navbar flex-col sm:flex-row container mx-auto">
+    <header className="bg-secondary h-20 flex items-center fixed top-0 left-0 right-0 z-20">
+      <div className="navbar flex px-2 sm:px-10">
         <div className="w-full navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-primary lg:hidden">
@@ -48,8 +43,10 @@ const Header = () => {
               {menuItems}
             </ul>
           </div>
-          <Link to="/" className="normal-case tracking-tighter font-semibold text-gray-600 text-4xl">
-            TasteTrove
+          <Link to="/" className="hidden sm:block normal-case tracking-tighter font-semibold text-gray-600 text-4xl ml-2">
+            <span>Taste</span>
+            <span className="text-orange-700">Trove</span>
+            <span></span>
           </Link>
         </div>
 
@@ -58,7 +55,7 @@ const Header = () => {
           <ul className="menu menu-horizontal px-1 space-x-2">{menuItems}</ul>
         </div>
 
-        <div className="w-full mt-2 sm:mt-0 navbar-end space-x-2">
+        <div className="w-full sm:mt-0 navbar-end space-x-2">
           {user?.uid && (
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-12 rounded-full">

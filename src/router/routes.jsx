@@ -1,13 +1,24 @@
+// import { createBrowserRouter } from "react-router-dom";
+// import MainLayout from "../layouts/MainLayout";
+// import Home from "../pages/Home";
+// import Login from "../pages/Login";
+// import Register from "../pages/Register";
+// import Blogs from "../pages/Blogs";
+// import NotFound from "../pages/NotFound";
+// import ForgetPassword from "../pages/ForgetPassword";
+// import ChefRecipes from "../pages/ChefRecipes";
+// import PrivateRoute from "./PrivateRoute";
+
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
-import Home from "../components/Home/Home";
-import Login from "../components/Login/Login";
-import Register from "../components/Register/Register";
-import Blogs from "../components/Blogs/Blogs";
-import NotFound from "../components/NotFound/NotFound";
-import ForgetPassword from "../components/ForgetPassword/ForgetPassword";
-import ChefRecipes from "../components/ChefRecipes/ChefRecipes";
+import NotFound from "../pages/NotFound";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import Blogs from "../pages/Blogs";
+import ForgetPassword from "../pages/ForgetPassword";
 import PrivateRoute from "./PrivateRoute";
+import ChefRecipes from "../pages/ChefRecipes";
 
 const router = createBrowserRouter([
   {

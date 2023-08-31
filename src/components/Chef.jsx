@@ -5,7 +5,7 @@ const Chef = ({ chef }) => {
   const navigate = useNavigate();
 
   const viewRecipesHandler = (id) => {
-    console.log(id);
+    // console.log(id);
     navigate(`/chefRecipes/${id}`);
   };
 

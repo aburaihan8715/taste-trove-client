@@ -1,13 +1,12 @@
-import React from "react";
-import Header from "../components/common/Header/Header";
-import Footer from "../components/common/Footer/Footer";
+import Header from "../ui/Header";
+import Footer from "../ui/Footer";
 import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (
     <div>
       <Header></Header>
-      <div className="min-h-[calc(100vh-324px)]">
+      <div className="mt-20">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>

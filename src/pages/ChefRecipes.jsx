@@ -18,14 +18,14 @@ const ChefRecipes = () => {
   };
 
   return (
-    <div className="py-8">
-      <div className="container mx-auto">
+    <section className="py-8">
+      <div className="p-2 sm:p-5 w-full sm:max-w-5xl mx-auto">
         <div>
           <div className="card lg:card-side bg-base-100 shadow-sm rounded">
-            <figure>
+            <figure className="flex-1">
               <img loading="lazy" className="w-full h-full" src={image} alt="chef" />
             </figure>
-            <div className="card-body">
+            <div className="card-body flex-1">
               <h3 className="card-title text-gray-600">{chefName}</h3>
               <p>{bio}</p>
               <p>Likes : {likes}</p>
@@ -65,8 +65,8 @@ const ChefRecipes = () => {
                 </div>
               </div>
 
-              <div className=" flex justify-end">
-                <div className="text-2xl border p-2 space-x-2">
+              <div className="flex justify-center sm:justify-end mt-3">
+                <div className="text-xl sm:text-2xl border p-2 space-x-2">
                   <span>⭐⭐⭐⭐ : {recipe?.rating}</span>
                   <div className="inline-block">
                     <button onClick={likeHandler} className="" disabled={like}>
@@ -81,7 +81,7 @@ const ChefRecipes = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
