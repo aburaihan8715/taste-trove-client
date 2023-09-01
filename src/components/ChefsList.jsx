@@ -24,7 +24,7 @@ const ChefsList = () => {
 
   return (
     <section className="px-2 mt-10 sm:mt-20 bg-gray-100">
-      <div className="w-full sm:max-w-5xl mx-auto">
+      <div className="w-full">
         <div>
           <h2 className="text-2xl sm:text-4xl text-center font-medium text-gray-600 tracking-tighter">Our Skilled and Passionate Chefs</h2>
           <p className="mt-6 text-center">
@@ -33,7 +33,7 @@ const ChefsList = () => {
             and creativity to every dish they prepare.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
           {chefsData.map((chef) => (
             <Chef key={chef.id} chef={chef}></Chef>
           ))}

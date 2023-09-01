@@ -1,0 +1,18 @@
+//completed task
+
+
+
+
+
+
+
+
+
+
+//incomplete task
+1. connect with mongodb
+2. implement like functionality
+3. implement rating functionality
+4. animation (framer motion)
+5. text background (image/gradient)
+6. social button action and brand wise color 

@@ -31,7 +31,7 @@ const Header = () => {
   );
   return (
     <header className="bg-secondary h-20 flex items-center fixed top-0 left-0 right-0 z-20">
-      <div className="navbar flex px-2 sm:px-10">
+      <div className="navbar flex px-2 sm:px-4">
         <div className="w-full navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-primary lg:hidden">
