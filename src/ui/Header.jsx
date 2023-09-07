@@ -3,14 +3,13 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
 
 const Header = () => {
-  const { logOut, user, setAuthError, authError } = useContext(AuthContext);
+  const { logOut, user } = useContext(AuthContext);
 
   const logOutHandler = () => {
     logOut()
       .then(() => {})
       .catch((error) => {
-        setAuthError(error.message);
-        alert(`Something wrong with : ${authError}`);
+        console.log(error.message);
       });
   };
 
@@ -43,7 +42,7 @@ const Header = () => {
               {menuItems}
             </ul>
           </div>
-          <Link to="/" className="hidden sm:block normal-case tracking-tighter font-semibold text-gray-600 text-4xl ml-2">
+          <Link to="/" className="hidden sm:block tracking-tighter font-semibold text-gray-600 text-4xl ml-2 uppercase">
             <span>Taste</span>
             <span className="text-orange-700">Trove</span>
             <span></span>

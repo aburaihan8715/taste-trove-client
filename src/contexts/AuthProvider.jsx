@@ -16,53 +16,45 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [authError, setAuthError] = useState("");
-  const [authLoading, setAuthLoading] = useState(false);
+  const [authLoading, setAuthLoading] = useState(true);
 
   // create or register user using email and password
   const createUserUsingEmailAndPassword = (email, password) => {
-    setAuthLoading(false);
+    setAuthLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // login using email and password
   const authenticateUsingEmailAndPassword = (email, password) => {
-    setAuthLoading(false);
+    setAuthLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   // login using google
   const authenticationUsingGoogle = () => {
-    setAuthLoading(false);
+    setAuthLoading(true);
     const googleProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleProvider);
   };
 
   // login using github
   const authenticationUsingGithub = () => {
-    setAuthLoading(false);
+    setAuthLoading(true);
     const githubProvider = new GithubAuthProvider();
     return signInWithPopup(auth, githubProvider);
   };
 
   // log out
   const logOut = () => {
-    setAuthLoading(false);
+    setAuthLoading(true);
     return signOut(auth);
   };
 
   // set observer
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-        setAuthLoading(false);
-        setAuthError("");
-        // console.log(user);
-      } else {
-        setAuthLoading(false);
-        setUser(null);
-      }
+      setAuthLoading(false);
+      setUser(user);
     });
     return () => {
       return unsubscribe();
@@ -75,8 +67,6 @@ const AuthProvider = ({ children }) => {
     logOut,
     user,
     setUser,
-    authError,
-    setAuthError,
     authLoading,
     setAuthLoading,
     createUserUsingEmailAndPassword,

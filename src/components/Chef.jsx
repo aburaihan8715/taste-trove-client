@@ -9,9 +9,9 @@ const Chef = ({ chef }) => {
   };
 
   return (
-    <div className="border">
+    <div className="card rounded shadow-md">
       <figure className="">
-        <img loading="lazy" className="w-full h-52 object-cover" src={image} alt="chef" />
+        <img loading="lazy" className="w-full h-40 object-cover" src={image} alt="chef" />
       </figure>
       <div className="card-body">
         <h3 className="card-title text-gray-600">{chefName}</h3>

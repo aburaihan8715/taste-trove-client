@@ -16,3 +16,5 @@
 4. animation (framer motion)
 5. text background (image/gradient)
 6. social button action and brand wise color 
+7. scroll to top
+8. change favicon

@@ -1,6 +1,6 @@
 const ContactUs = () => {
   return (
-    <section className="bg-base-200 py-8 px-2 sm:px-10">
+    <section className="bg-secondary py-8 px-2 sm:px-10">
       <div className="w-full sm:max-w-5xl mx-auto">
         <div className="">
           <div className="grid sm:grid-cols-2 gap-8">
@@ -10,26 +10,26 @@ const ContactUs = () => {
 
             <div className="self-end pb-8">
               <div className="">
-                <h3 className="text-3xl font-medium text-gray-600">Contact Us</h3>
+                <h3 className="text-3xl font-medium text-orange-700 uppercase">Contact Us</h3>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
                   </label>
-                  <input type="text" placeholder="email" className="input input-bordered input-primary" />
+                  <input type="text" placeholder="email" className="input input-bordered input-error" />
                 </div>
 
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Password</span>
                   </label>
-                  <input type="text" placeholder="password" className="input input-bordered  input-primary" />
+                  <input type="text" placeholder="password" className="input input-bordered input-error" />
                 </div>
 
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Message</span>
                   </label>
-                  <textarea className="textarea textarea-primary" placeholder="Message"></textarea>
+                  <textarea className="textarea textarea-error" placeholder="Message"></textarea>
                 </div>
 
                 <div className="form-control mt-6">

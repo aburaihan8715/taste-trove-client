@@ -21,7 +21,7 @@ export default {
 
           warning: "#EDC754",
 
-          error: "#F53A19",
+          error: "#C2410C",
         },
       },
     ],

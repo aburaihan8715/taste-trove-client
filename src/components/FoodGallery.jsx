@@ -15,8 +15,8 @@ const styleVertical = {
 
 const FoodGallery = () => {
   return (
-    <section className="mb-10">
-      <div className="">
+    <section className="py-10">
+      <div className="border p-5">
         <h2 className="text-4xl text-center uppercase mb-10 mt-5">
           <span>food </span>
           <span className="text-orange-700">gallery</span>{" "}
