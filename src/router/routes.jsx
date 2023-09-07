@@ -54,7 +54,7 @@ const router = createBrowserRouter([
         ),
         loader: () => fetch("https://taste-trove-server-aburaihan8715.vercel.app/chefs"),
         // https://taste-trove-server-aburaihan8715.vercel.app/chefs
-        // http://localhost:4000/chefs
+        // https://taste-trove-server.vercel.app/chefs
       },
     ],
   },

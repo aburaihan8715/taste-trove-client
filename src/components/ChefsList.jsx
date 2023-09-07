@@ -10,7 +10,7 @@ const ChefsList = () => {
   useEffect(() => {
     fetch("https://taste-trove-server-aburaihan8715.vercel.app/chefs")
       // https://taste-trove-server-aburaihan8715.vercel.app/chefs
-      // http://localhost:4000
+      // https://taste-trove-server.vercel.app
       .then((res) => res.json())
       .then((data) => {
         setChefsData(data);
